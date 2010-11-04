@@ -1195,4 +1195,32 @@ div
 margin-top: 10px;	
 }
 	
-	
+/* Reactions */
+
+.reaction_like_button,
+.reaction_dislike_button {
+  width: 100px;
+  color: #3f5c9a;
+  background-repeat: no-repeat;
+  background-color: #dddddd;
+  border: 0px;
+  cursor: pointer;
+}
+
+.reaction_like_button {
+  background-position: 5px 4px;
+}
+
+.reaction_dislike_button {
+  background-position: 5px 5px;
+}
+
+.button_selected .reaction_like_button,
+.reaction_like_button:hover {
+  background-color: #c0e5c0;
+}
+
+.button_selected .reaction_dislike_button,
+.reaction_dislike_button:hover {
+  background-color: #e5c0c0;
+}

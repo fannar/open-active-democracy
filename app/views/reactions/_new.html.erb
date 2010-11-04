@@ -1,0 +1,23 @@
+<%
+  @priority = priority
+  @reaction = Reaction.find_by_user_id_and_priority_id(current_user.id, @priority.id) || current_user.reactions.build({:priority => @priority})
+%>
+<div class="reactions">
+  <div class="reaction_like">
+    <% remote_form_for([@user,@reaction], :html => {:onsubmit => "jQuery('#reaction_submit_like').attr('disabled', true);jQuery('#reaction_submit_dislike').attr('disabled', true);"}) do |f| %>
+      <%= f.hidden_field :priority_id %>
+      <%= f.hidden_field :like, :value => 1 %>
+      <%= f.hidden_field :dislike, :value => 0 %>
+      <span<%= " class=button_selected" if @reaction.like? %>><%= f.submit(@reaction.like? ? "I support" : "Support", :id => "reaction_submit_like", :class => "reaction_like_button") %></span>
+    <% end %>
+  </div>
+  <div class="reaction_dislike">
+    <% remote_form_for([@user,@reaction], :html => {:onsubmit => "jQuery('#reaction_submit_like').attr('disabled', true);jQuery('#reaction_submit_dislike').attr('disabled', true);"}) do |f| %>
+      <%= f.hidden_field :priority_id %>
+      <%= f.hidden_field :like, :value => 0 %>
+      <%= f.hidden_field :dislike, :value => 1 %>
+      <span<%= " class=button_selected" if @reaction.dislike? %>><%= f.submit(@reaction.dislike? ? "I oppose" : "Oppose", :id => "reaction_submit_dislike", :class => "reaction_dislike_button") %></span>
+    <% end %>
+  </div>
+</div>
+<div class="clear"></div>

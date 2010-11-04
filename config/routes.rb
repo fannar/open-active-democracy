@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :reactions
+
   map.connect '/priorites/flag/:id', :controller=>'priorities', :action=>'flag'
   map.connect '/priorites/abusive/:id', :controller=>'priorities', :action=>'abusive'
   map.connect '/priorites/not_abusive/:id', :controller=>'priorities', :action=>'not_abusive'

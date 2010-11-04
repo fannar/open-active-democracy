@@ -14,3 +14,6 @@
 <meta name="description" content="<%=@priority.description%>" />
 <link rel="image_src" href="http://<%=request.host.downcase%>/images/logo_facebook_share.gif" />
 <% end%>
+<div id="reaction_<%= @priority.id %>">
+  <%= render :partial => "reactions/new", :locals => { :priority => @priority } %>
+</div>

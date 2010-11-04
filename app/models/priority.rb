@@ -32,6 +32,8 @@ class Priority < ActiveRecord::Base
 
   has_many :notifications, :as => :notifiable, :dependent => :destroy
   
+  has_many :reactions
+  
   acts_as_taggable_on :issues
   
   liquid_methods :id, :name, :activity_id, :content, :user, :activity, :show_url

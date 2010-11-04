@@ -1,0 +1,4 @@
+jQuery(document).ready(function() {
+  // Update reaction buttons
+  jQuery("#reaction_<%= @reaction ? @reaction.priority_id : @priority.id %>").html("<%= escape_javascript(render(:partial => 'new', :locals => { :priority => @reaction.priority }))%>");
+});
