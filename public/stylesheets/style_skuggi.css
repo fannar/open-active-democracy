@@ -44,7 +44,8 @@ min-height: 20px;
 	padding: 2px 0px 0px 23px;
 }
 .comment_list_empty {
-	padding: 0px 0px 0px 29px;
+/*	padding: 0px 0px 0px 29px; */
+	padding: 0px 0px 0px 0px;
 }
 
 .comment, .comment_endorses, .comment_opposes {

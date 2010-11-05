@@ -979,7 +979,7 @@ is:
         blank: "Smelltu á 'velja' til að velja myndaskrá til að upphlaða. Smelltu síðan á 'uppfæra og vista'"
         success: "Tókst að sækja mynd"
         submit: "Sæktu og vistaðu mynd"
-        must: "Verður að vera gif, jpg eða png"
+        must: "JPG, GIF eða PNG"
     points:
         name: "rök"
         title: "Rök"
@@ -1357,7 +1357,7 @@ is:
                 example: ""
             email:
                 label: "Netfang"
-                example: "(Aldrei birt án leyfis frá þér)"
+                example: "Við notum netfangið til að geta sent þér tilkynningar ef einhver kvartar undar færslu frá þér og til að geta náð til þín ef nauðsynlegt reynist. Einnig er það notað ef þú ákveður að gerast áskrifandi að efni vefsins. Netfangið verður hvorki afhent öðrum né birt hér á vefnum án leyfis frá þér."
             branch:
                 label: "Í hvaða hópi áttu best heima?"
             address:

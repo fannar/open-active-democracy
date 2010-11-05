@@ -3,25 +3,24 @@
 	<!-- TODO profile image --><br/>
 	<span class="profile_image"><%= render :partial => "users/pic_48", :locals => {:user => current_user}%> 
 	</span>
-    <span class="profile_name"><%=current_user.name%></span>
-    <!-- <span class="Address"><%=current_user.address%> -->
-<!--    <br/>
-    <span class="profile_info"><%=current_user.national_identity%></span>
--->
 </div>
-<div id="Settings">
-    <span class="profile_edit"> 
-		<a href="/settings/picture" title="<%= t('esb.mouseover.edituser')%>"><img src="/images/profile_edit.gif" border=0></a> 	
-		<!--<a href="<%#= url_for current_user %>/edit" title=""><img src="/images/profile_edit.gif" border=0></a>-->
-		<%#= link_to image_tag("profile_edit.gif", :border => 0), url_for current_user, :controller => "", :action => "", :title => t('esb.mouseover.edituser'), :alt => t('esb.mouseover.edituser') %>
-	</span>
-	<span class="profile_logout">		
-		<%= link_to image_tag("profile_logout.gif", :border => 0), logout_path, :title => t('esb.mouseover.logout'), :alt => t('esb.mouseover.logout') %>
-	</span>
-	<span class="facebook">
-		 					 <%= render :partial=>"shared/facebook" %>
 
-	</span>
+<div id="Settings">
+	<span class="profile_name"><%=current_user.name%></span>
+	<!--<span class="profile_info"><%=current_user.national_identity%></span>-->
+
+    <div class="profile_edit"> 
+		<a href="/settings/picture" title="<%= t('esb.mouseover.edituser')%>"><img src="/images/profile_edit.gif" border=0></a> 	
+		<%#= link_to image_tag("profile_edit.gif", :border => 0), url_for current_user, :controller => "", :action => "", :title => t('esb.mouseover.edituser'), :alt => t('esb.mouseover.edituser') %> <a href="/settings/picture" class="stillingar">Stillingar</a>
+	</div>
+	
+	<div class="profile_logout">		
+		<%= link_to image_tag("profile_logout.gif", :border => 0,:title => t('esb.mouseover.logout'), :alt => t('esb.mouseover.logout')), logout_path %> <a href="/logout/" class="utskraning">Útskráning</a>
+	</div>
+
+	<div class="facebook">
+		<%= render :partial=>"shared/facebook" %>
+	</div>
 				
 	<!-- <div class="profile_actions">
 		<div class="actions_number">32</div>

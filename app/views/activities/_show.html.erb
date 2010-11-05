@@ -1,4 +1,4 @@
-<div id="activity_and_comments_<%= activity.id %>" class="activity_border">
+<div id="activity_and_comments_<%= activity.id %>" class="point">
 	<% if activity.class != ActivityCommentParticipant and activity.class != ActivityBulletinProfileAuthor %>
     <%= render :partial => "activities/comments", :locals => {:activity => activity} %>		
 	<% end %>

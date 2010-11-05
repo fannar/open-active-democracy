@@ -1,5 +1,4 @@
 <div class="treaty_docs_newest">
-
 <ul>
 <% @documents.each do |document|%>
 <li>  <%=link_to document.title, document.url, :target => "_blank" %> / <%=document.tag_name%></li>

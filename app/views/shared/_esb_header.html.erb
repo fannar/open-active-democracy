@@ -1,7 +1,7 @@
           <!-- Haus -->
             <div id="Header">
                 <!-- Hægrasvæði í haus, geymir tilkynningar og táknmyndir, gætu orðið fleiri þarna -->         
-			    <div id="header-left"><a href="/?r=1"><img src="/images/trans_header.png" /></a>			    </div>
+			    <div id="header-left"><a href="/?r=1"><img src="/images/trans_header.png" alt="Á forsíðu" title="Á forsíðu" /></a>			    </div>
 			    <div id="header-right">
 
 				<%= link_to image_tag("askrift.png", :border => 0), "/askrift", :title => t('esb.mouseover.subscribe')%>
@@ -9,8 +9,8 @@
 				</div>
 				<div id="search">
 				<%=form_tag "/leita", :method=>"get"%>
-					<input id="search-id" type="text" name="q"/>
-					<input type="submit" value="Leita" class="leita" />
+					<span class="search_field"><input id="search-id" type="text" name="q"/></span>
+					<span class="search_button"><input type="submit" value="Leita" class="leita" /></span>
 				</form>					
 				</div>				    
             </div>
